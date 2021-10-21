@@ -5,7 +5,7 @@
 *,
 *::before,
 *::after {
-    margin: 1;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -14,7 +14,7 @@
 :root {
     --dark-color: #2d2c2c;
     --purple-solid: #350a4f;
-    --purple-transparent: rgba(53, 10, 79, .7);
+    --purple-transparent: rgb(53, 10, 79);
     --purple-transparent-alt: rgba(53, 10, 79, .5);
     --purple-light: #8f50fb;
     --yellow-solid: #fa9e2c;
@@ -29,7 +29,7 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 1.6rem;
+    font-size: 25.6px;
     color: var(--dark-color);
 }
 
@@ -43,27 +43,28 @@ ul {
 }
 
 section {
-    padding: 5rem 0;
+    padding: 80px 0;
 }
 
 /*nic*/
 .container {
     width: 100%;
-    max-width: 120rem;
-    padding: 0 1.5rem;
+    max-width: 1920px;
+    padding: 0 24px;
     margin: 0 auto;
 }
 
 /*Style Header-a*/
 .header {
     width: 100%;
-    height: 6rem;
+    height: 112px;
     display: flex;
     align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--purple-transparent);
+    background: linear-gradient(270deg, #C2C1C1 0%, #BBBBBB 49.48%, #A5A5A5 100%);
+    border-radius: 0px 0px 10px 10px;
     z-index: 999;
 }
 
@@ -78,8 +79,8 @@ section {
 }
 
 .hamburger-menu {
-    font-size: 2.6rem;
-    color: #fff;
+    font-size: 41.6px;
+    color: #000;
     cursor: pointer;
     position: relative;
     z-index: 1500;
@@ -89,11 +90,11 @@ section {
     display: none;
 }
 
-.hamburger-menu .hamburger-menu .fa-times{
+.menu-open .hamburger-menu .fa-times{
     display: block;
 }
 
-.hamburger-menu .hamburger-menu .fa-bars{
+.menu-open .hamburger-menu .fa-bars{
     display: none;
 }
 
@@ -103,7 +104,7 @@ section {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--purple-solid);
+    background: linear-gradient(270deg, #C2C1C1 0%, #BBBBBB 49.48%, #A5A5A5 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,15 +121,27 @@ section {
 }
 
 .nav-item:not(:last-child){
-    margin-bottom: .5rem;
+    margin-bottom: 8px;
 }
 
 .nav-link{
     display: block;
-    color: #fff;
-    font-size: 3rem;
+    color: #000;
+    font-size: 48px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 1rem;
+    padding: 16px;
+}
+
+/*Hero*/
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url("./images/the_paradise_bg.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
